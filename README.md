@@ -157,22 +157,6 @@ java -cp target/classes com.assignment1.MainApplication
 
 ---
 
-## Package the Project
-
-Create the JAR file:
-
-```bash
-mvn package
-```
-
-The generated JAR will be located in:
-
-```text
-target/
-```
-
----
-
 ## Example Menu
 
 ```text
