@@ -23,8 +23,7 @@ public class MainApplication {
             System.out.println("0. Exit");
             System.out.print("Choice: ");
 
-            choice = scanner.nextInt();
-            scanner.nextLine();
+            choice = readInt();
 
             switch (choice) {
                 case 1:
@@ -64,8 +63,7 @@ public class MainApplication {
             System.out.println("0. Back");
             System.out.print("Choice: ");
 
-            choice = scanner.nextInt();
-            scanner.nextLine();
+            choice = readInt();
 
             switch (choice) {
 
@@ -76,7 +74,7 @@ public class MainApplication {
 
                 case 2:
                     System.out.print("Enter index: ");
-                    list.remove(scanner.nextInt());
+                    list.remove(readInt());
                     break;
 
                 case 3:
@@ -118,8 +116,7 @@ public class MainApplication {
             System.out.println("0. Back");
             System.out.print("Choice: ");
 
-            choice = scanner.nextInt();
-            scanner.nextLine();
+            choice = readInt();
 
             switch (choice) {
 
@@ -170,8 +167,7 @@ public class MainApplication {
             System.out.println("0. Back");
             System.out.print("Choice: ");
 
-            choice = scanner.nextInt();
-            scanner.nextLine();
+            choice = readInt();
 
             switch (choice) {
 
@@ -202,5 +198,21 @@ public class MainApplication {
             }
 
         } while (choice != 0);
+    }
+
+    private static int readInt() {
+
+        while (true) {
+
+            try {
+                int value = scanner.nextInt();
+                scanner.nextLine();
+                return value;
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a number.");
+                scanner.nextLine();
+            }
+
+        }
     }
 }
